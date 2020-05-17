@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 from meals.models import Meal, Recipe
 
@@ -7,6 +8,7 @@ def next_three_recipe_recommendations(meals):
     return Recipe.objects.exclude(id__in=eaten_recipe_ids)[:3]
 
 
+@login_required
 def index(request):
     recent_meals = Meal.objects.all()
     context = {
