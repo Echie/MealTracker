@@ -58,7 +58,8 @@ SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
 # ------------------------------------------------------------------------------
 
 MIDDLEWARE += ["whitenoise.middleware.WhiteNoiseMiddleware"]  # noqa F405
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # https://django-storages.readthedocs.io/en/latest/#installation
 # INSTALLED_APPS += ["storages"]  # noqa F405
