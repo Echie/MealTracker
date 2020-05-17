@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% if recommendations %}
+  <h2>Voitas syödä</h2>
+  <ul class="list-group">
+    {% for recommendation in recommendations %}
+      <li class="list-group-item">{{recommendation}}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No recommendations :(</p>
+{% endif %}
+
+<hr class="my-4" />
+
+{% if meals %}
+  <h2>Mitä ollaa lähiaikoina syöty</h2>
+  <ul class="list-group">
+    {% for meal in meals %}
+      <li class="list-group-item">{{meal}}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No meals :(</p>
+{% endif %}
+
+<hr class="my-4" />
+
+{% if recipes %}
+  <h2>Kaikki reseptit</h2>
+  <ul class="list-group">
+    {% for recipe in recipes %}
+      <li class="list-group-item">{{recipe}}</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No recipes :(</p>
+{% endif %}
+{% endblock content %}

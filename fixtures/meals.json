@@ -1,0 +1,297 @@
+[
+{
+    "model": "meals.recipe",
+    "pk": 1,
+    "fields": {
+        "name": "Siskonmakkarakeitto",
+        "ingredients": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "meals.recipe",
+    "pk": 2,
+    "fields": {
+        "name": "Jauhelihatortillat",
+        "ingredients": [
+            4,
+            5,
+            8,
+            9,
+            10,
+            11,
+            12
+        ]
+    }
+},
+{
+    "model": "meals.recipe",
+    "pk": 3,
+    "fields": {
+        "name": "Kasvispelti",
+        "ingredients": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+        ]
+    }
+},
+{
+    "model": "meals.recipe",
+    "pk": 4,
+    "fields": {
+        "name": "Jauheliha-aurajuustokastike",
+        "ingredients": [
+            19,
+            20,
+            21,
+            22,
+            23
+        ]
+    }
+},
+{
+    "model": "meals.recipe",
+    "pk": 5,
+    "fields": {
+        "name": "Kana curry",
+        "ingredients": [
+            24,
+            25,
+            26,
+            27,
+            28
+        ]
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 1,
+    "fields": {
+        "name": "Siskonmakkara",
+        "amount": "500g"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 2,
+    "fields": {
+        "name": "Keittopakastevihannekset",
+        "amount": "1 pussi"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 3,
+    "fields": {
+        "name": "Lihaliemikuutio",
+        "amount": "1 kpl"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 4,
+    "fields": {
+        "name": "Jauheliha",
+        "amount": "800g"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 5,
+    "fields": {
+        "name": "Salaatti",
+        "amount": ""
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 8,
+    "fields": {
+        "name": "Kurkku",
+        "amount": ""
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 9,
+    "fields": {
+        "name": "Paprika",
+        "amount": ""
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 10,
+    "fields": {
+        "name": "Salsakastike",
+        "amount": "1 purkki"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 11,
+    "fields": {
+        "name": "Smetana",
+        "amount": "1 purkki"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 12,
+    "fields": {
+        "name": "Tortillat",
+        "amount": ""
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 13,
+    "fields": {
+        "name": "Porkkanat",
+        "amount": ""
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 14,
+    "fields": {
+        "name": "Parsakaali",
+        "amount": ""
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 15,
+    "fields": {
+        "name": "Feta",
+        "amount": ""
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 16,
+    "fields": {
+        "name": "Pekoni",
+        "amount": "1 paketti"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 17,
+    "fields": {
+        "name": "Kananmunat",
+        "amount": "4 kpl"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 18,
+    "fields": {
+        "name": "Oliivi\u00f6ljy",
+        "amount": ""
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 19,
+    "fields": {
+        "name": "Jauheliha",
+        "amount": "400g"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 20,
+    "fields": {
+        "name": "Aurajuusto",
+        "amount": "150g"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 21,
+    "fields": {
+        "name": "Bronx pakastekasvikset",
+        "amount": "1 pussi"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 22,
+    "fields": {
+        "name": "Tomaattikastike",
+        "amount": "400g"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 23,
+    "fields": {
+        "name": "Tomaattipyree",
+        "amount": ""
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 24,
+    "fields": {
+        "name": "Kana",
+        "amount": "800g"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 25,
+    "fields": {
+        "name": "Curry",
+        "amount": "1 purkki"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 26,
+    "fields": {
+        "name": "Sipuli",
+        "amount": "200g"
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 27,
+    "fields": {
+        "name": "Valkosipuli",
+        "amount": ""
+    }
+},
+{
+    "model": "meals.ingredient",
+    "pk": 28,
+    "fields": {
+        "name": "Kookosmaito",
+        "amount": "400g"
+    }
+},
+{
+    "model": "meals.meal",
+    "pk": 1,
+    "fields": {
+        "recipe": 3,
+        "date": "2020-05-14"
+    }
+},
+{
+    "model": "meals.meal",
+    "pk": 2,
+    "fields": {
+        "recipe": 4,
+        "date": "2020-05-11"
+    }
+}
+]

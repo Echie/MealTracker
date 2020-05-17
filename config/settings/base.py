@@ -41,9 +41,7 @@ LOCALE_PATHS = [str(ROOT_DIR / "locale")]
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-DATABASES = {
-    "default": env.db("DATABASE_URL", default="postgres:///mealtracker")
-}
+DATABASES = {"default": env.db("DATABASE_URL", default="postgres:///mealtracker")}
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
 
 # URLS
@@ -77,6 +75,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "mealtracker.users.apps.UsersConfig",
+    "mealtracker.meals.apps.MealsConfig",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
