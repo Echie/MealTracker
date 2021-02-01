@@ -279,3 +279,7 @@ REST_FRAMEWORK = {
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+# Google credentials
+GOOGLE_USERNAME = env.str("GOOGLE_USERNAME")
+GOOGLE_PASSWORD = env.str("GOOGLE_PASSWORD")
