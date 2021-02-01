@@ -3,9 +3,14 @@ from django.contrib import admin
 from .models import Ingredient, Meal, Recipe
 
 
+class IngredientInlineAdmin(admin.TabularInline):
+    model = Recipe.ingredients.through
+
+
 @admin.register(Recipe)
 class RecipeAdmin(admin.ModelAdmin):
-    pass
+    fields = ["name"]
+    inlines = [IngredientInlineAdmin]
 
 
 @admin.register(Ingredient)
