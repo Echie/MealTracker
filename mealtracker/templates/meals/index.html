@@ -4,8 +4,31 @@
 {% if recommendations %}
   <h2>Voitas syödä</h2>
   <ul class="list-group">
-    {% for recommendation in recommendations %}
-      <li class="list-group-item">{{recommendation}}</li>
+    {% for rec in recommendations %}
+      <li class="list-group-item">
+        <div class="recommendation-title"
+          data-toggle="collapse"
+          data-target="#recommendation-collapse-{{ forloop.counter0 }}"
+          aria-expanded="false"
+          aria-controls="recommendation-collapse-{{ forloop.counter0 }}">
+          {{rec}}
+        </div>
+
+        <div
+          class="collapse"
+          id="recommendation-collapse-{{ forloop.counter0 }}"
+          style="margin-top: 10px;">
+
+          <div class="card card-body">
+            <ul class="list-group list-group-flush">
+              {% for ing in rec.ingredients.all %}
+                <li class="list-group-item">{{ ing }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+
+        </div>
+      </li>
     {% endfor %}
   </ul>
 {% else %}
