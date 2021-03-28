@@ -6,7 +6,9 @@
   <ul class="list-group">
     {% for rec in recommendations %}
       <li class="list-group-item">
-        <div class="recommendation-title"
+        <div
+          class="recommendation-title"
+          style="cursor: pointer;"
           data-toggle="collapse"
           data-target="#recommendation-collapse-{{ forloop.counter0 }}"
           aria-expanded="false"
