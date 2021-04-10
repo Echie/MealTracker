@@ -11,9 +11,7 @@ def calculate_meal_score(meal_date):
 
 
 def next_three_recipe_recommendations(meals):
-    recipe_scores = {
-        r_id: 0 for r_id in Recipe.objects.all().values_list("id", flat=True)
-    }
+    recipe_scores = {r_id: 0 for r_id in Recipe.objects.all().values_list("id", flat=True)}
     for meal in meals:
         recipe_scores[meal.recipe.id] += calculate_meal_score(meal.date)
 
@@ -25,7 +23,7 @@ def next_three_recipe_recommendations(meals):
 
 @login_required
 def index(request):
-    recent_meals = Meal.objects.filter(date__gte=date.today() - timedelta(days=30))
+    recent_meals = Meal.objects.filter(date__gte=date.today() - timedelta(days=30)).order_by("-date")
     context = {
         "meals": recent_meals,
         "recipes": Recipe.objects.all(),
