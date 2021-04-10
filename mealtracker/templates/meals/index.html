@@ -4,33 +4,8 @@
 {% if recommendations %}
   <h2>Voitas syödä</h2>
   <ul class="list-group">
-    {% for rec in recommendations %}
-      <li class="list-group-item">
-        <div
-          class="recommendation-title"
-          style="cursor: pointer;"
-          data-toggle="collapse"
-          data-target="#recommendation-collapse-{{ forloop.counter0 }}"
-          aria-expanded="false"
-          aria-controls="recommendation-collapse-{{ forloop.counter0 }}">
-          {{rec}}
-        </div>
-
-        <div
-          class="collapse"
-          id="recommendation-collapse-{{ forloop.counter0 }}"
-          style="margin-top: 10px;">
-
-          <div class="card card-body">
-            <ul class="list-group list-group-flush">
-              {% for ing in rec.ingredients.all %}
-                <li class="list-group-item">{{ ing }}</li>
-              {% endfor %}
-            </ul>
-          </div>
-
-        </div>
-      </li>
+    {% for recommendation in recommendations %}
+      {% include "meals/meal.html" with meal=recommendation section="recommendations" %}
     {% endfor %}
   </ul>
 {% else %}
@@ -43,7 +18,7 @@
   <h2>Mitä ollaa lähiaikoina syöty</h2>
   <ul class="list-group">
     {% for meal in meals %}
-      <li class="list-group-item">{{meal}}</li>
+      {% include "meals/meal.html" with meal=meal section="meals" %}
     {% endfor %}
   </ul>
 {% else %}
@@ -56,7 +31,7 @@
   <h2>Kaikki reseptit</h2>
   <ul class="list-group">
     {% for recipe in recipes %}
-      <li class="list-group-item">{{recipe}}</li>
+      {% include "meals/meal.html" with meal=recipe section="recipes" %}
     {% endfor %}
   </ul>
 {% else %}

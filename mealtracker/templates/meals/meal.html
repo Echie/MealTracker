@@ -1,0 +1,25 @@
+<li class="list-group-item">
+  <div
+    class="recommendation-title"
+    style="cursor: pointer;"
+    data-toggle="collapse"
+    data-target="#recommendation-collapse-{{ section }}-{{ forloop.counter0 }}"
+    aria-expanded="false"
+    aria-controls="recommendation-collapse-{{ section }}-{{ forloop.counter0 }}">
+    {{meal}}
+  </div>
+
+  <div
+    class="collapse"
+    id="recommendation-collapse-{{ section }}-{{ forloop.counter0 }}"
+    style="margin-top: 10px;">
+
+    <div class="card card-body">
+      <ul class="list-group list-group-flush">
+        {% for ing in meal.ingredients.all %}
+          <li class="list-group-item">{{ ing }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</li>
